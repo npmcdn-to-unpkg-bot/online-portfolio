@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<title>David Mok's Web Design Portfolio</title>
@@ -9,7 +10,6 @@
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-    <!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'> -->
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="stylesheets/custom.css">
 
@@ -35,13 +35,11 @@
 </head>
 <body data-spy="scroll" data-target="#main-navbar" data-offset="150">
 	
-	<nav id="main-navbar" class="navbar navbar-default navbar-fixed-top" role="navigation" style="background-color: #0081C3; box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);">
-        <!-- ED8318 -->
-        <!-- B5A3B5 -->
+	<nav id="main-navbar" class="main-navbar navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand" href="#about">David Mok</a>
-                <a href="#contact" class="blacken">
+                <a href="#contact">
                     <button type="button" class="navbar-toggle phone-button">
                         <span class="sr-only">Contact navigation</span>
                         <span><i class="glyphicon glyphicon-earphone"></i></span>
@@ -68,7 +66,7 @@
                     </li>
                     <li><a href="#projects">My Works</a>
                     </li>
-                    <li><a href="#history">Timeline</a>
+                    <li><a href="#timeline">Timeline</a>
                     </li>
                     <li><a href="#skills">Skills</a>
                     </li>
@@ -88,10 +86,6 @@
                     <div class="intro-message">
                         <h1>Hi, I'm David,</h1>
                         <h3>a Web Developer.</h3>
-                        <!-- <hr class="intro-divider">
-
-                        <h2>A bit about me:</h2>
-                        <p>{ Stuff about me }</p> -->
                     </div>
                 </div>
             </div>
@@ -102,18 +96,14 @@
     </div>
     <!-- /.intro-header -->
 
-
-    <!-- style="background-color: #FFDFBF" -->
-<!-- FFC080 -->
-    <div class="content-section-a" id="projects" style="background-color: #f8f8f8">
+    <!-- Projects Section -->
+    <div class="projects-section" id="projects">
         <div class="container">
 
             <div class="row">
                 <div class="col-xs-12">
-                    <!-- <div class="clearfix"></div> -->
                     <h2 class="section-heading">My Works</h2>
-                    <!--  color: #9EC4D9 -->
-                    <p style="text-align: center;" class="lead description">Here are some of my works, check them out!</p>
+                    <p class="lead description text-center">Here are some of my works, check them out!</p>
                     <div class="row">
                         <div class="col-xs-6 col-sm-4 col-md-3">
                             <div class="project-view">
@@ -150,11 +140,11 @@
                         <div class="clearfix visible-xs-block"></div>
                         <div class="col-xs-6 col-sm-4 col-md-3">
                             <div class="project-view">
-                                <a href="#" class="thumbnail project-thumb" data-toggle="modal" data-target="#demoModal">
-                                  <img class="img-responsive img-thumbnail" src="images/projects/google-demo-hd.jpg" alt="My Google Maps Demo">
+                                <a href="#" class="thumbnail project-thumb" data-toggle="modal" data-target="#favouritesModal">
+                                  <img class="img-responsive img-thumbnail" src="images/projects/favourite-works.jpg" alt="My Favourites" >
                                 </a>
-                                <div style="padding: 9px; color: #333; text-align: center">
-                                    <h5>Google Maps Demo</h5>
+                                <div class="project-desc">
+                                    <h5>My Favourites</h5>
                                 </div>
                             </div>
                         </div>
@@ -164,7 +154,7 @@
                                 <a href="#" class="thumbnail project-thumb" data-toggle="modal" data-target="#slideModal">
                                   <img class="img-responsive img-thumbnail" src="images/projects/brand-pillar-md.jpg" alt="My Brand Pillars Demo">
                                 </a>
-                                <div style="padding: 9px; color: #333; text-align: center">
+                                <div class="project-desc">
                                     <h5>Brand Pillars Demo</h5>
                                 </div>
                             </div>
@@ -172,11 +162,11 @@
                         <div class="clearfix hidden-sm"></div>
                         <div class="col-xs-6 col-sm-4 col-md-3">
                             <div class="project-view">
-                                <a href="#" class="thumbnail project-thumb" data-toggle="modal" data-target="#myModal">
-                                  <img src="http://placehold.it/270x270" alt="..." >
+                                <a href="#" class="thumbnail project-thumb" data-toggle="modal" data-target="#mapModal">
+                                  <img class="img-responsive img-thumbnail" src="images/projects/google-demo-hd.jpg" alt="My Google Maps Demo">
                                 </a>
-                                <div style="padding: 9px; color: #333; text-align: center">
-                                    <h5>D3 Demo</h5>
+                                <div class="project-desc">
+                                    <h5>Google Maps Demo</h5>
                                 </div>
                             </div>
                         </div>
@@ -187,41 +177,47 @@
             </div>
 
         </div>
-        <!-- /.container -->
-
-
-
     </div>
-    <!-- /.content-section-a -->
+    <!-- /.projects-section -->
 
-    <div class="history-section" id="history" style="background-color: #E2DFDF">
+
+    <!-- Timeline Section -->
+    <div class="timeline-section" id="timeline">
     	<div class="container">
-            <!-- style="background-color: FFDFBF" -->
     		<!-- Credits to http://bootsnipp.com/snippets/featured/timeline-responsive -->
+            <div class="timeline-heading-container hidden-xs">
 
-    	    <div style="margin-bottom: 30px;" class="pull-left hidden-xs">
-    	    	<div style="display: inline-block; margin-right: 10px;" class="timeline-badge info"><i class="glyphicon glyphicon-book"></i></div>
-    	    	<h2 style="display: inline-block; vertical-align: sub;">Education</h2>
-    	    </div>
-    	    
+                <div class="pull-left">
+        	    	<div class="timeline-badge timeline-heading-badge info">
+                        <i class="glyphicon glyphicon-book"></i>
+                    </div>
+        	    	<h2 class="timeline-heading-label">Education</h2>
+        	    </div>
+        	    
+                <div class="pull-right">
+        	    	<div class="timeline-badge timeline-heading-badge success">
+                        <i class="glyphicon glyphicon-briefcase"></i>
+                    </div>
+        	    	<h2 class="timeline-heading-label">Work History</h2>
+        		</div>
+                
+        	    <div class="clearfix"></div>
+            </div>
 
-    	    <div style="margin-bottom: 30px;" class="pull-right hidden-xs">
-    	    	<div style="display: inline-block; margin-right: 10px;" class="timeline-badge success"><i class="glyphicon glyphicon-briefcase"></i></div>
-    	    	<h2 style="display: inline-block; vertical-align: sub;">Work History</h2>
-    		</div>
+    	    <div class="timeline-heading-container visible-xs-block text-center">
 
-    	    <div class="clearfix"></div>
-
-    	    <div style="margin-bottom: 30px; text-align: center; margin-left:auto; margin-right:auto;" class="visible-xs-block">
-    	    	<div style="display: inline-block; padding-right: 50px">
-    	    		<div style="display: inline-block; margin-right: 10px;" class="timeline-badge info"><i class="glyphicon glyphicon-book"></i></div>
-    	    		<h3 style="display: inline-block; vertical-align: sub;">Education</h3>
+    	    	<div>
+    	    		<div class="timeline-badge timeline-heading-badge info">
+                        <i class="glyphicon glyphicon-book"></i>
+                    </div>
+    	    		<h3 class="timeline-heading-label">Education</h3>
     	    	</div>
-    	    	<div style="display: inline-block; ">
-    	    		<div style="display: inline-block; margin: 0 10px;" class="timeline-badge success"><i class="glyphicon glyphicon-briefcase"></i></div>
-                    <h3 style="display: inline-block; vertical-align: sub;">Work History</h3>
+    	    	<div>
+    	    		<div class="timeline-badge timeline-heading-badge success">
+                        <i class="glyphicon glyphicon-briefcase"></i>
+                    </div>
+                    <h3 class="timeline-heading-label">Work History</h3>
     	    	</div>
-    	    	
     	    	<br>
     	    	
     	    </div>
@@ -236,7 +232,7 @@
     	            <div class="timeline-body">
     	              <p>Yoobee School of Design</p>
     	              <p><em>Web Design Bootcamp - studied Front End Web Development</em></p>
-                      <p><a href="#" style="text-decoration: none">Learn More</a></p>
+                      <p><a href="#" class="timeline-link">Learn More</a></p>
     	            </div>
     	          </div>
     	        </li>
@@ -249,7 +245,7 @@
     	            <div class="timeline-body">
     	            	<p>NorthSouth GIS</p>
     	              	<p><em>Developer, Geographic Information Systems</em></p>
-                        <p><a href="#" style="text-decoration: none">Learn More</a></p>
+                        <p><a href="#" class="timeline-link">Learn More</a></p>
     	            </div>
     	          </div>
     	        </li>
@@ -262,193 +258,24 @@
     	            <div class="timeline-body">
     	              <p>The University of Auckland</p>
     	              <p><em>Bachelor of Commerce - majored in Information Systems and Accounting</em></p>
-                      <p><a href="#" style="text-decoration: none">Learn More</a></p>
+                      <p><a href="#" class="timeline-link">Learn More</a></p>
     	            </div>
     	          </div>
     	        </li>
     	    </ul>
 
-    		<div class="modal fade" id="yoobeeModal" tabindex="-1" role="dialog" aria-labelledby="yoobeeModalLabel" aria-hidden="true">
-    		  <div class="modal-dialog">
-    		    <div class="modal-content">
-    		      <div class="modal-header">
-    		        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-    		        <h4 class="modal-title" id="yoobeeModalLabel">Yoobee School of Design <br><a href="#">Visit Website</a></h4>
-    		      </div>
-    		      <div class="modal-body">
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <img class="img-responsive modal-history-pic" src="images/timeline/yoobee.png" alt="Yoobee School of Design" style="">
-                            <div class="modal-history-label">
-                                <h5 style="margin-top: 0">May 2014 - Aug 2014</h5>
-                                <h5><em>Web Design Bootcamp</em></h5>
-                            </div>
-                            <div class="clearfix"></div>
-
-                            <h5 class="standalone">Details</h5>
-                            <ul>
-                                <li>Training in industry-standard web design skills over 12 intensive weeks</li>
-                                <li>Development-wise, learnt HTML5/CSS3/JavaScript, development for multiple screens/devices, Bootstrap, etc.</li>
-                                <li>Design-wise, learnt about layout, typography and other principles, Photoshop, wireframes and prototypes, etc. </li>
-                            </ul>
-                        </div>
-                    </div>
-    		      </div>
-    		      <div class="modal-footer">
-    		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-    		      </div>
-    		    </div>
-    		  </div>
-    		</div>
-
-    		<div class="modal fade" id="nsgModal" tabindex="-1" role="dialog" aria-labelledby="nsgModalLabel" aria-hidden="true">
-    		  <div class="modal-dialog">
-    		    <div class="modal-content">
-    		      <div class="modal-header">
-    		        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-    		        <h4 class="modal-title" id="nsgModalLabel">NorthSouth GIS NZ Ltd <br><a href="#">Visit Website</a></h4>
-    		      </div>
-    		      <div class="modal-body">
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <img class="img-responsive  modal-history-pic" src="images/timeline/nsg.png" alt="NorthSouth GIS NZ Ltd" style="">
-                                <div class="modal-history-label">
-                                    <h5>Jul 2012 - Feb 2014, May 2014</h5>
-                                    <h5><em>Developer, Geographic Information Systems</em></h5>
-                                </div>
-                                <div class="clearfix"></div>
-                                <h5 class="standalone">Duties</h5>
-                                <ul>
-                                    <li>Designed, developed and implemented GIS solutions for a range of clients</li>
-                                    <li>Handled several frontline support desk calls, performed diagnosis, troubleshooting and bug fixing on integrated systems</li>
-                                    <li>Provided quality assurance and thorough testing for applications</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <h5>Achievements</h5>
-                                <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="5000" >
-                                    <!-- Indicators -->
-                                    <ul class="carousel-indicators">
-                                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                                        <li data-target="#myCarousel" data-slide-to="1"></li>
-                                        <li data-target="#myCarousel" data-slide-to="2"></li>
-                                    </ul>
-
-                                    <!-- Wrapper for slides -->
-                                    <div class="carousel-inner">
-                                        <div class="item active">
-                                            <div class="item-achievement">
-                                                <h6>Canterbury Earthquake Recovery Authority (CERA)</h6>
-                                                <img src="images/timeline/cera0211_logo.png" alt="Canterbury Earthquake Recovery Authority" class="item-achievement-pic">
-                                                <p>Provided the Residential Red Zone team with an application to digitally map and record Vegetation Clearance work carried out on the ground</p>
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <div class="item-achievement">
-                                                <h6>Auckland Airport</h6>
-                                                <img src="images/timeline/aial-dark.png" alt="Auckland Airport" class="item-achievement-pic">
-                                                <p>Delivered a suite of applications that digitises their Permit Issuing process, which has now issued over 1000 Permits to various Contractors</p>
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <div class="item-achievement">
-                                                <h6>Department of Conservation</h6>
-                                                <img src="images/timeline/doc.png" alt="Department of Conservation" class="item-achievement-pic">
-                                                <p>Provided product training to DOC personnel, enabling them to embrace NSG's product and improve the service they provide to the public</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Controls -->
-                                    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                                        <i class="fa fa-chevron-circle-left"></i>
-                                    </a>
-                                    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                                        <i class="fa fa-chevron-circle-right"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-    		      </div>
-    		      <div class="modal-footer">
-    		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-    		      </div>
-    		    </div>
-    		  </div>
-    		</div>
-
-            <div class="modal fade" id="uoaModal" tabindex="-1" role="dialog" aria-labelledby="uoaModalLabel" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                    <h4 class="modal-title" id="uoaModalLabel">The University of Auckland <br><a href="#">Visit Website</a></h4>
-                  </div>
-                  <div class="modal-body">
-                    <div class="row">
-                        <div class="col-xs-12">
-
-                            <img class="img-responsive modal-history-pic" src="images/timeline/aucklanduni.png" alt="Yoobee School of Design" style="">
-                            <div class="modal-history-label">
-                                <h5>Mar 2008 - Sep 2011</h5>
-                                <h5><em>Bachelor of Commerce</em></h5>
-                            </div>
-                            <div class="clearfix"></div>
-
-                            <!-- <br> -->
-                            <h5 class="standalone">Details</h5>
-                            <ul>
-                                <li>Majored in Information Systems and Accounting</li>
-                                <li>Courses I had taken:   
-                                    <ul class="list-inline">
-                                        <li style="vertical-align: top">
-                                            <br>
-                                            <h6>IS Courses</h6>
-                                            <ul>
-                                                <li>System Analysis and Design</li>
-                                                <li>Information Systems Design</li>
-                                                <li>Software Applications Development</li>
-                                                <li>Advanced Database Management</li>
-                                                <li>Data Networking</li>
-                                            </ul>
-                                        </li>
-                                        <li style="vertical-align: top">
-                                            <br>
-                                            <h6>Accounting Courses</h6>
-                                            <ul>
-                                                <li>Accounting Information Systems</li>
-                                                <li>Auditing</li>
-                                                <li>Financial Accounting</li> 
-                                                <li>Cost and Management Accounting</li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-
-                        </div>
-                    </div>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                  </div>
-                </div>
-              </div>
-            </div>
     	</div>
     </div>
+    <!-- /.timeline-section -->
 
-<!-- FFC080 -->
-    <div class="content-section-b" id="skills" style="background-color: #f8f8f8">
+
+    <!-- Skills Section -->
+    <div class="skills-section" id="skills">
         <div class="container">
 
             <div class="row">
                 <div class="col-xs-12">
-                    <!-- <hr class="section-heading-spacer"> 
-                    <div class="clearfix"></div> -->
+
                     <h2 class="section-heading">Skills</h2>
                     <p class="lead description">With programming roots in C# .Net and subsequent progression into Front End Development, I have a versatile and expansive range of skills that can handle any task</p>
 
@@ -457,7 +284,7 @@
                       <div class="panel panel-default">
                         <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
                             <div class="panel-heading">
-                              <h4 class="panel-title">
+                              <h4 class="panel-title"><i class="fa fa-chevron-circle-up"></i>
                                   Front End Development
                               </h4>
                             </div>
@@ -470,7 +297,7 @@
                                 <div class="skill-label">HTML5</div>
                                 <div class="skill-content">
                                     <div class="progress">
-                                      <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+                                      <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                 </div>
                                 <div class="clearfix"></div>
@@ -480,7 +307,7 @@
                                 <div class="skill-label">CSS3</div>
                                 <div class="skill-content">
                                     <div class="progress">
-                                      <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+                                      <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                 </div>
                                 <div class="clearfix"></div>
@@ -490,7 +317,7 @@
                                 <div class="skill-label">JavaScript &amp; jQuery</div>
                                 <div class="skill-content">
                                     <div class="progress">
-                                      <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div>
+                                      <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                 </div>
                                 <div class="clearfix"></div>
@@ -500,7 +327,7 @@
                                 <div class="skill-label">PHP</div>
                                 <div class="skill-content">
                                     <div class="progress">
-                                      <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;"></div>
+                                      <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                 </div>
                                 <div class="clearfix"></div>
@@ -513,7 +340,7 @@
                       <div class="panel panel-default">
                         <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
                             <div class="panel-heading">
-                              <h4 class="panel-title">
+                              <h4 class="panel-title"><i class="fa fa-chevron-circle-down"></i>
                                   Web Design
                               </h4>
                             </div>
@@ -525,7 +352,7 @@
                                 <div class="skill-label">Adobe Illustrator</div>
                                 <div class="skill-content">
                                     <div class="progress">
-                                      <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;"></div>
+                                      <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                 </div>
                                 <div class="clearfix"></div>
@@ -535,7 +362,7 @@
                                 <div class="skill-label">Adobe Photoshop</div>
                                 <div class="skill-content">
                                     <div class="progress">
-                                      <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;"></div>
+                                      <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                 </div>
                                 <div class="clearfix"></div>
@@ -548,7 +375,7 @@
                       <div class="panel panel-default">
                         <a data-toggle="collapse" data-parent="#accordion" href="#collapseSix">
                             <div class="panel-heading">
-                              <h4 class="panel-title">
+                              <h4 class="panel-title"><i class="fa fa-chevron-circle-down"></i>
                                   Frameworks and API
                               </h4>
                             </div>
@@ -560,7 +387,7 @@
                                 <div class="skill-label">Bootstrap</div>
                                 <div class="skill-content">
                                     <div class="progress">
-                                      <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+                                      <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                 </div>
                                 <div class="clearfix"></div>
@@ -570,7 +397,7 @@
                                 <div class="skill-label">Zurb Foundation</div>
                                 <div class="skill-content">
                                     <div class="progress">
-                                      <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+                                      <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                 </div>
                                 <div class="clearfix"></div>
@@ -580,7 +407,7 @@
                                 <div class="skill-label">Google API (inc Map, Analytics)</div>
                                 <div class="skill-content">
                                     <div class="progress">
-                                      <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;"></div>
+                                      <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                 </div>
                                 <div class="clearfix"></div>
@@ -590,7 +417,7 @@
                                 <div class="skill-label">Facebook API</div>
                                 <div class="skill-content">
                                     <div class="progress">
-                                      <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;"></div>
+                                      <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                 </div>
                                 <div class="clearfix"></div>
@@ -603,7 +430,7 @@
                       <div class="panel panel-default">
                         <a data-toggle="collapse" data-parent="#accordion" href="#collapseSeven">
                             <div class="panel-heading">
-                              <h4 class="panel-title">
+                              <h4 class="panel-title"><i class="fa fa-chevron-circle-down"></i>
                                   Version Control
                               </h4>
                             </div>
@@ -615,7 +442,7 @@
                                 <div class="skill-label">Git/Github</div>
                                 <div class="skill-content">
                                     <div class="progress">
-                                      <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;"></div>
+                                      <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                 </div>
                                 <div class="clearfix"></div>
@@ -625,7 +452,7 @@
                                 <div class="skill-label">Tortoise SVN</div>
                                 <div class="skill-content">
                                     <div class="progress">
-                                      <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;"></div>
+                                      <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                 </div>
                                 <div class="clearfix"></div>
@@ -638,8 +465,9 @@
                       <div class="panel panel-default">
                         <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
                             <div class="panel-heading">
-                              <h4 class="panel-title">
-                                  Microsoft .NET Framework 4.5
+
+                              <h4 class="panel-title"><i class="fa fa-chevron-circle-down"></i>
+                                   Microsoft .NET Framework 4.5
                               </h4>
                             </div>
                         </a>
@@ -650,7 +478,7 @@
                                 <div class="skill-label">C#</div>
                                 <div class="skill-content">
                                     <div class="progress">
-                                      <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div>
+                                      <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                 </div>
                                 <div class="clearfix"></div>
@@ -660,7 +488,7 @@
                                 <div class="skill-label">VB.Net</div>
                                 <div class="skill-content">
                                     <div class="progress">
-                                      <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+                                      <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                 </div>
                                 <div class="clearfix"></div>
@@ -670,7 +498,7 @@
                                 <div class="skill-label">ASP.NET</div>
                                 <div class="skill-content">
                                     <div class="progress">
-                                      <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;"></div>
+                                      <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                 </div>
                                 <div class="clearfix"></div>
@@ -680,17 +508,16 @@
                                 <div class="skill-label">Windows Workflow</div>
                                 <div class="skill-content">
                                     <div class="progress">
-                                      <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+                                      <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" ></div>
                                     </div>
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
-                            
                             <div class="skill-panel">
                                 <div class="skill-label">Silverlight</div>
                                 <div class="skill-content">
                                     <div class="progress">
-                                      <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+                                      <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" ></div>
                                     </div>
                                 </div>
                                 <div class="clearfix"></div>
@@ -703,7 +530,7 @@
                       <div class="panel panel-default">
                         <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
                             <div class="panel-heading">
-                              <h4 class="panel-title">
+                              <h4 class="panel-title"><i class="fa fa-chevron-circle-down"></i>
                                   Database Technologies
                               </h4>
                             </div>
@@ -715,7 +542,7 @@
                                 <div class="skill-label">SQL/T-SQL</div>
                                 <div class="skill-content">
                                     <div class="progress">
-                                      <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+                                      <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                 </div>
                                 <div class="clearfix"></div>
@@ -725,7 +552,7 @@
                                 <div class="skill-label">Microsoft SQL Server 2008</div>
                                 <div class="skill-content">
                                     <div class="progress">
-                                      <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+                                      <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                 </div>
                                 <div class="clearfix"></div>
@@ -738,7 +565,7 @@
                       <div class="panel panel-default">
                         <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
                             <div class="panel-heading">
-                              <h4 class="panel-title">
+                              <h4 class="panel-title"><i class="fa fa-chevron-circle-down"></i>
                                   Geographic Information Systems
                               </h4>
                             </div>
@@ -750,7 +577,7 @@
                                 <div class="skill-label">Esri ArcGIS Server</div>
                                 <div class="skill-content">
                                     <div class="progress">
-                                      <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+                                      <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                 </div>
                                 <div class="clearfix"></div>
@@ -760,7 +587,7 @@
                                 <div class="skill-label">Geocortex Essentials</div>
                                 <div class="skill-content">
                                     <div class="progress">
-                                      <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div>
+                                      <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                 </div>
                                 <div class="clearfix"></div>
@@ -773,60 +600,18 @@
 
                     </div> <!-- End Collapse -->
 
-                    <a href="#" target="_blank" role="button" class="btn btn-primary btn-lg" style="margin: 0 auto; display: block">Download a copy of my CV (PDF format)</a>
-
-                    <!-- <div class="wrapper">
-                      <article class="main">
-                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>  
-                      </article>
-                      <aside class="aside aside-1">Aside 1</aside>
-                      <aside class="aside aside-2">Aside 2</aside>
-                    </div> -->
-
-                    <!-- <h3 class="subsection-heading">Professional Capabilities</h3>
-                    <div class="row soft-wrapper panel panel-default" style="margin: 0 auto; padding: 10px 15px;">
-                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                            <h4 style="color: #428bca;">Problem Solving/Analysis</h4>
-                            <ul style="color: #333;" >
-                                <li>Keen attention to detail</li>
-                                <li>User requirements analysis and evaluation</li>
-                                <li>Project risk mitigation</li>
-                                <li>Software bug fixing and troubleshooting</li>
-                                <li>System testing and quality assurance</li>
-                                <li>Resolve issues under time pressure</li>
-                            </ul>
-                        </div>
-                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                            <h4 style="color: #428bca;">Communication</h4>
-                            <ul style="color: #333;" >
-                                <li>Documentation skills - technological research findings, technical guides for applications, etc.</li>
-                                <li>Product demonstrations, for company meetings and for clients</li>
-                                <li>Customer service</li>
-                                <li>Product training</li>
-                            </ul>
-                        </div>
-                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                            <h4 style="color: #428bca;" >Teamwork</h4>
-                            <ul  style="color: #333;" >
-                                <li>Cooperate with Project Managers, Consultants and other Developers on different team projects</li>
-                                <li>Evaluate requirements together with clients</li>
-                                <li>Cooperate with colleagues on numerous system upgrades</li>
-                            </ul>
-                        </div>
-                    </div> -->
+                    <a href="CV-David-Mok.pdf" target="_blank" role="button" class="btn btn-primary btn-lg btn-block cv-btn">Download my CV here (PDF)</a>
 
                 </div>
             </div>
 
         </div>
-        <!-- /.container -->
-
     </div>
-    <!-- /.content-section-b -->
+    <!-- /.skills-section -->
 
-<!-- style="background-color: #BF9060;" -->
-<!-- FFDFBF -->
-    <div class="footer-section" id="contact" style="background-color: #9EC4D9;">
+
+    <!-- Contact Section -->
+    <div class="contact-section" id="contact">
         <div class="container">
 
             <div class="row">
@@ -846,7 +631,7 @@
                                         <i class="glyphicon glyphicon-earphone"></i> Phone
                                     </a>
                                 </li>
-                            <ul>
+                            </ul>
                             <br>
                         </div>
                         <div class="col-sm-4 col-sm-pull-4 text-center">
@@ -876,35 +661,183 @@
             </div>
 
         </div>
-        <!-- /.container -->
 
     </div>
+    <!-- /.contact-section -->
 
-            <!-- Project Modals -->
-        <div class="modal fade portfolio-modal" id="movieModal" tabindex="-1" role="dialog" aria-labelledby="movieModalLabel" aria-hidden="true">
+
+
+        <!-- Timeline Modals -->
+
+        <!-- Yoobee Modal -->
+        <div class="modal fade" id="yoobeeModal" tabindex="-1" role="dialog" aria-labelledby="yoobeeModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="movieModalLabel">Movie Promotion Website <br>
-                    <a href="#" target="_blank">See project here</a>
+                <h4 class="modal-title" id="yoobeeModalLabel">Yoobee School of Design <br>
+                    <a href="http://www.yoobee.ac.nz/short-courses/auckland/front-end-designer-bootcamp/">Visit Website</a>
                 </h4>
               </div>
               <div class="modal-body">
                 <div class="row">
                     <div class="col-xs-12">
-                        <img class="img-responsive img-thumbnail modal-preview-pic" src="images/movie-preview.jpg" alt="Preview of my Movie Website">
-                        <!-- <br> -->
-                        <h4 class="standalone">About</h4>
-                        <p>To assess the students' understanding of basic design and development principles, techniques and methodologies, the tutors at Yoobee gave us an assignment to create a website for a movie of our choice.</p>
-                        <br>
-                        <h4 class="standalone">Details</h4>
+                        <img class="img-responsive modal-history-pic" src="images/timeline/yoobee.png" alt="Yoobee School of Design">
+                        <div class="modal-history-label">
+                            <h5>May 2014 - Aug 2014</h5>
+                            <h5><em>Web Design Bootcamp</em></h5>
+                        </div>
+                        <div class="clearfix"></div>
+
+                        <h5 class="standalone">Details</h5>
                         <ul>
-                            <li>A wireframe for the website was created first, from which a functioning prototype was made</li>
-                            <li>The Bootstrap framework was used so that the site will be mobile responsive and work across all devices</li>
-                            <li>Care has been taken to ensure RGBA background colours will be cross compatible with Internet Explorer 8</li>
+                            <li>Training in industry-standard web design skills over 12 intensive weeks</li>
+                            <li>Development-wise, learnt HTML5/CSS3/JavaScript, development for multiple screens/devices, Bootstrap, etc.</li>
+                            <li>Design-wise, learnt about layout, typography and other principles, Photoshop, wireframes and prototypes, etc. </li>
                         </ul>
-                        <a href="#" target="_blank">See project here</a>
+                    </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- NSG Modal -->
+        <div class="modal fade" id="nsgModal" tabindex="-1" role="dialog" aria-labelledby="nsgModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="nsgModalLabel">NorthSouth GIS NZ Ltd <br>
+                    <a href="http://www.northsouthgis.co.nz/">Visit Website</a>
+                </h4>
+              </div>
+              <div class="modal-body">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <img class="img-responsive  modal-history-pic" src="images/timeline/nsg.png" alt="NorthSouth GIS NZ Ltd">
+                            <div class="modal-history-label">
+                                <h5>Jul 2012 - Feb 2014, May 2014</h5>
+                                <h5><em>Developer, Geographic Information Systems</em></h5>
+                            </div>
+                            <div class="clearfix"></div>
+                            <h5 class="standalone">Duties</h5>
+                            <ul>
+                                <li>Designed, developed and implemented GIS solutions for a range of clients</li>
+                                <li>Handled several frontline support desk calls, performed diagnosis, troubleshooting and bug fixing on integrated systems</li>
+                                <li>Provided quality assurance and thorough testing for applications</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h5>Achievements</h5>
+                            <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="5000">
+
+                                <!-- Indicators -->
+                                <ul class="carousel-indicators">
+                                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                                </ul>
+
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner">
+                                    <div class="item active">
+                                        <div class="item-achievement">
+                                            <h6>Canterbury Earthquake Recovery Authority (CERA)</h6>
+                                            <img src="images/timeline/cera0211_logo.png" alt="Canterbury Earthquake Recovery Authority" class="item-achievement-pic">
+                                            <p>Provided the Residential Red Zone team with an application to digitally map and record Vegetation Clearance work carried out on the ground</p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="item-achievement">
+                                            <h6>Auckland Airport</h6>
+                                            <img src="images/timeline/aial-dark.png" alt="Auckland Airport" class="item-achievement-pic">
+                                            <p>Delivered a suite of applications that digitises their Permit Issuing process, which has now issued over 1000 Permits to various Contractors</p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="item-achievement">
+                                            <h6>Department of Conservation</h6>
+                                            <img src="images/timeline/doc.png" alt="Department of Conservation" class="item-achievement-pic">
+                                            <p>Provided product training to DOC personnel, enabling them to embrace NSG's product and improve the service they provide to the public</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Controls -->
+                                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                                    <i class="fa fa-chevron-circle-left"></i>
+                                </a>
+                                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                                    <i class="fa fa-chevron-circle-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- University of Auckland Modal -->
+        <div class="modal fade" id="uoaModal" tabindex="-1" role="dialog" aria-labelledby="uoaModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="uoaModalLabel">The University of Auckland <br>
+                    <a href="http://www.business.auckland.ac.nz/en.html">Visit Website</a>
+                </h4>
+              </div>
+              <div class="modal-body">
+                <div class="row">
+                    <div class="col-xs-12">
+
+                        <img class="img-responsive modal-history-pic" src="images/timeline/aucklanduni.png" alt="Yoobee School of Design">
+                        <div class="modal-history-label">
+                            <h5>Mar 2008 - Sep 2011</h5>
+                            <h5><em>Bachelor of Commerce</em></h5>
+                        </div>
+                        <div class="clearfix"></div>
+
+                        <h5 class="standalone">Details</h5>
+                        <ul>
+                            <li>Majored in Information Systems and Accounting</li>
+                            <li>Courses I had taken:   
+                                <ul class="list-inline">
+                                    <li class="item-course">
+                                        <br>
+                                        <h6>IS Courses</h6>
+                                        <ul>
+                                            <li>System Analysis and Design</li>
+                                            <li>Information Systems Design</li>
+                                            <li>Software Applications Development</li>
+                                            <li>Advanced Database Management</li>
+                                            <li>Data Networking</li>
+                                        </ul>
+                                    </li>
+                                    <li class="item-course">
+                                        <br>
+                                        <h6>Accounting Courses</h6>
+                                        <ul>
+                                            <li>Accounting Information Systems</li>
+                                            <li>Auditing</li>
+                                            <li>Financial Accounting</li> 
+                                            <li>Cost and Management Accounting</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
 
                     </div>
                 </div>
@@ -916,36 +849,136 @@
           </div>
         </div>
 
-        <div class="modal fade portfolio-modal" id="brandModal" tabindex="-1" role="dialog" aria-labelledby="brandModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
+        <!-- Project Modals -->
+        
+        <!-- Favourites Modal -->
+        <div class="modal fade portfolio-modal" id="favouritesModal" tabindex="-1" role="dialog" aria-labelledby="favouritesModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
             <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="brandModalLabel">Brand Guidelines Website <br>
-                    <a href="#" target="_blank">See project here</a>
-                </h4>
+                <h4 class="modal-title" id="favouritesModalLabel">My Favourites</h4>
               </div>
               <div class="modal-body">
-                <!-- <div class="row">
-                    <div class="col-xs-6">
-                        <img class="img-responsive" src="images/brand-preview.jpg" alt="Preview of my Brand Guidelines Website" style="margin: 15% auto 0;">
-                    </div>
-                    <div class="col-xs-6">
-                    </div>
-                </div> -->
                 <div class="row">
                     <div class="col-xs-12">
-                        <img class="img-responsive img-thumbnail modal-preview-pic" src="images/brand-preview.jpg" alt="Preview of my Brand Guidelines Website">
-                        <!-- <br> -->
-                        <h4 class="standalone">About</h4>
-                        <p>The Bootcamp tutors at Yoobee gave the students an assignment to create an online Brand Guidelines website, providing the chance to demonstrate their understanding of the concept</p>
-                        <br>
-                        <h4 class="standalone">Details</h4>
-                        <ul>
-                            <li>Use of pre-established brands was permitted, so I decided to center the site around the PlayStation 4 Guidelines</li>
-                            <li>The Foundation framework was utilised for this website, enabling it to be mobile responsive</li>
-                        </ul>
-                        <a href="#" target="_blank">See project here</a>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <p>Be they books or video games, there's a lot of works from all kinds of storytelling medium that I like.  Here are a few of my favourites</p>
+                                <div class="alert alert-info" role="alert">
+                                    Use the buttons below to filter through the categories
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 text-center">
+                                <div id="filters" class="btn-group isotope-filter-group">
+                                  <button type="button" class="btn btn-default is-checked" data-filter="*">Show all</button>
+                                  <button type="button" class="btn btn-default" data-filter=".animation">Animation</button>
+                                  <button type="button" class="btn btn-default" data-filter=".drama">Drama</button>
+                                  <button type="button" class="btn btn-default" data-filter=".movie">Movies</button>
+                                  <button type="button" class="btn btn-default" data-filter=".game">Video Games</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="thumb-container js-isotope">
+
+                                    <div class="thumb-review animation">
+                                        <a href="#" class="thumbnail" data-toggle="tooltip" data-placement="bottom" title="Awesome pirate comic">
+                                            <img class="review-img" src="images/isotope/one-piece.jpg" alt="One Piece">
+                                            <div><small>One Piece</small></div>
+                                        </a>
+                                    </div>
+
+                                    <div class="thumb-review animation">
+                                        <a href="#" class="thumbnail" data-toggle="tooltip" data-placement="bottom" title="Excellent fantasy comic">
+                                            <img class="review-img" src="images/isotope/fullmetal.jpg" alt="Fullmetal Alchemist">
+                                            <div><small>Fullmetal Alchemist</small></div>
+                                        </a>
+                                    </div>
+
+                                    <div class="thumb-review animation">
+                                        <a href="#" class="thumbnail" data-toggle="tooltip" data-placement="bottom" title="American cartoon that is on par with Japanese Anime">
+                                            <img class="review-img" src="images/isotope/avatar.jpg" alt="Avatar: The Last Airbender">
+                                            <div><small>Avatar: The Last Airbender</small></div>
+                                        </a>
+                                    </div>
+
+                                    <div class="thumb-review drama">
+                                        <a href="#" class="thumbnail" data-toggle="tooltip" data-placement="bottom" title="Great spy comedy/drama">
+                                            <img class="review-img" src="images/isotope/chuck.jpg" alt="Chuck">
+                                            <div><small>Chuck</small></div>
+                                        </a>
+                                    </div>
+
+                                    <div class="thumb-review drama">
+                                        <a href="#" class="thumbnail" data-toggle="tooltip" data-placement="bottom" title="Wonderful sitcom about doctors, with good drama in-between">
+                                            <img class="review-img" src="images/isotope/scrubs.jpg" alt="Scrubs">
+                                            <div><small>Scrubs</small></div>
+                                        </a>
+                                    </div>
+
+                                    <div class="thumb-review drama">
+                                        <a href="#" class="thumbnail" data-toggle="tooltip" data-placement="bottom" title="Fantastic civilian hero vigilante drama">
+                                            <img class="review-img" src="images/isotope/person-of-interest.jpg" alt="Person of Interest">
+                                            <div><small>Person of Interest</small></div>
+                                        </a>
+                                    </div>
+
+                                    <div class="thumb-review movie">
+                                        <a href="#" class="thumbnail" data-toggle="tooltip" data-placement="bottom" title="Great Sci-fi film">
+                                            <img class="review-img" src="images/isotope/inception.jpg" alt="Inception">
+                                            <div><small>Inception</small></div>
+                                        </a>
+                                    </div>
+
+                                    <div class="thumb-review movie">
+                                        <a href="#" class="thumbnail" data-toggle="tooltip" data-placement="bottom" title="Marvelous end to the trilogy">
+                                            <img class="review-img" src="images/isotope/toy-story.jpg" alt="Toy Story 3">
+                                            <div><small>Toy Story 3</small></div>
+                                        </a>
+                                    </div>
+
+                                    <div class="thumb-review game">
+                                        <a href="#" class="thumbnail" data-toggle="tooltip" data-placement="bottom" title="Great 3rd Person Action Platformer">
+                                            <img class="review-img" src="images/isotope/ratchet-and-clank.jpg" alt="Ratchet and Clank">
+                                            <div><small>Ratchet and Clank</small></div>
+                                        </a>
+                                    </div>
+
+                                    <div class="thumb-review game">
+                                        <a href="#" class="thumbnail" data-toggle="tooltip" data-placement="bottom" title="Excellent RPG, good story">
+                                            <img class="review-img" src="images/isotope/final-fantasy.jpg" alt="Final Fantasy 10">
+                                            <div><small>Final Fantasy X</small></div>
+                                        </a>
+                                    </div>
+
+                                    <div class="thumb-review game">
+                                        <a href="#" class="thumbnail" data-toggle="tooltip" data-placement="bottom" title="Ingenious collaboration between Disney and Squaresoft">
+                                            <img class="review-img" src="images/isotope/kingdom-hearts.jpg" alt="Kingdom Hearts">
+                                            <div><small>Kingdom Hearts</small></div>
+                                        </a>
+                                    </div>
+
+                                    <div class="thumb-review game">
+                                        <a href="#" class="thumbnail" data-toggle="tooltip" data-placement="bottom" title="Must-have RPG for the Nintendo 3DS, so much fun">
+                                            <img class="review-img" src="images/isotope/bravely-default.jpg" alt="Bravely Default">
+                                            <div><small>Bravely Default</small></div>
+                                        </a>
+                                    </div>
+
+                                </div>
+
+                                <ul>
+                                    <li>This application is powered by <a href="http://isotope.metafizzy.co" target="_blank">Isotope</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+
                     </div>
                 </div>
               </div>
@@ -955,7 +988,8 @@
             </div>
           </div>
         </div>
-
+        
+        <!-- Brand Pillars Modal -->
         <div class="modal fade portfolio-modal" id="slideModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
@@ -966,15 +1000,22 @@
               <div class="modal-body">
                     <div class="alert alert-info" role="alert">Click on a button for details of each Pillar</div>
                     <div class="row">
-                        <div class="col-xs-4 text-center"> 
-                            <button id="emotive-btn" type="button" class="btn btn-default btn-block pillar-btn" >Emotive</button>
-                            <button id="immersive-btn" type="button" class="btn btn-default btn-block pillar-btn" >Immersive</button>
-                            <button id="irreverent-btn" type="button" class="btn btn-default btn-block pillar-btn" >Irreverent</button>
-                            <button id="celebratory-btn" type="button" class="btn btn-default btn-block pillar-btn" >Celebratory</button>
-                            <button id="unexpected-btn" type="button" class="btn btn-default btn-block pillar-btn" >Unexpected</button>
-                            <button id="fearless-btn" type="button" class="btn btn-default btn-block pillar-btn" >Fearless</button>
+                        <div class="col-xs-12 col-sm-4 text-center">
+                            <div class="row">
+                                <div class="col-xs-6 col-sm-12"><button id="emotive-btn" type="button" class="btn btn-default btn-block pillar-btn" >Emotive</button></div>
+                                <div class="col-xs-6 col-sm-12"><button id="immersive-btn" type="button" class="btn btn-default btn-block pillar-btn" >Immersive</button></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-6 col-sm-12"><button id="irreverent-btn" type="button" class="btn btn-default btn-block pillar-btn" >Irreverent</button></div>
+                                <div class="col-xs-6 col-sm-12"><button id="celebratory-btn" type="button" class="btn btn-default btn-block pillar-btn" >Celebratory</button></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-6 col-sm-12"><button id="unexpected-btn" type="button" class="btn btn-default btn-block pillar-btn" >Unexpected</button></div>
+                                <div class="col-xs-6 col-sm-12"><button id="fearless-btn" type="button" class="btn btn-default btn-block pillar-btn" >Fearless</button></div>
+                            </div>
+                            
                         </div>
-                        <div id="pillar-column" style="height: 200px" class="col-xs-8">
+                        <div class="pillar-column col-xs-12 col-sm-8">
                             <div class="panel panel-default pillar-wrapper">
                               <div class="panel-heading">
                                 <h4 class="panel-title" id="pillar-title"></h4>
@@ -1003,120 +1044,24 @@
           </div>
         </div>
 
-        <div class="modal fade portfolio-modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="myModalLabel">Isotope</h4>
-              </div>
-              <div class="modal-body">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="row">
 
-                            <div class="col-xs-12 text-center">
-                                <div class="alert alert-info" role="alert">
-                                    Here are some pieces of literature that I like, use the buttons below to filter the categories
-                                </div>
-                                <div id="filters" class="btn-group">
-                                  <button type="button" class="btn btn-default" data-filter="*">Show all</button>
-                                  <button type="button" class="btn btn-default" data-filter=".manga">Manga</button>
-                                  <button type="button" class="btn btn-default" data-filter=".drama">Drama</button>
-                                  <button type="button" class="btn btn-default" data-filter=".movie">Movies</button>
-                                  <button type="button" class="btn btn-default" data-filter=".game">Video Games</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <!-- display: inline-block; width: 75%; vertical-align: top; -->
-                            <div class="col-xs-12">
-                                <div id="thumb-container" class="js-isotope" style=" border: 1px solid black">
-
-                                    <div class="thumb-reviews manga">
-                                        <img src="http://placehold.it/100x100" alt="">
-                                        <div><small>One Piece</small></div>
-                                    </div>
-
-                                    <div class="thumb-reviews manga">
-                                        <img src="http://placehold.it/100x100" alt="">
-                                        <div><small>Fullmetal Alchemist</small></div>
-                                    </div>
-
-                                    <div class="thumb-reviews manga">
-                                        <img src="http://placehold.it/100x100" alt="">
-                                        <div><small>Sket Dance</small></div>
-                                    </div>
-
-                                    <div class="thumb-reviews drama">
-                                        <img src="http://placehold.it/100x100" alt="">
-                                        <div><small>Chuck</small></div>
-                                    </div>
-
-                                    <div class="thumb-reviews drama">
-                                        <img src="http://placehold.it/100x100" alt="">
-                                        <div><small>Person of Interest</small></div>
-                                    </div>
-
-                                    <div class="thumb-reviews game">
-                                        <img src="http://placehold.it/100x100" alt="">
-                                        <div><small>Ratchet and Clank</small></div>
-                                    </div>
-
-                                    <div class="thumb-reviews game">
-                                        <img src="http://placehold.it/100x100" alt="">
-                                        <div><small>Final Fantasy X</small></div>
-                                    </div>
-
-                                    <div class="thumb-reviews game">
-                                        <img src="http://placehold.it/100x100" alt="">
-                                        <div><small>Bravely Default</small></div>
-                                    </div>
-
-                                    <div class="thumb-reviews movie">
-                                        <img src="http://placehold.it/100x100" alt="">
-                                        <div><small>Inception</small></div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="col-xs-12">
-                                <br>
-                                <ul>
-                                    <li>This application is powered by <a href="http://isotope.metafizzy.co/" target="_blank">Isotope</a></li>
-                                </ul>
-                            </div>
-
-                        </div>
-
-
-                    </div>
-                </div>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="modal fade portfolio-modal" id="demoModal" tabindex="-1" role="dialog" aria-labelledby="demoModalLabel" aria-hidden="true" style="">
+        <!-- Must be last Modal, Google Maps Modal seems to jam succeeding Modals from firing -->
+        <div class="modal fade portfolio-modal" id="mapModal" tabindex="-1" role="dialog" aria-labelledby="mapModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="demoModalLabel">Google Map Demo</h4>
+                <h4 class="modal-title" id="mapModalLabel">Google Maps Demo</h4>
               </div>
               <div class="modal-body">
                 <div class="row">
                     <div class="col-xs-12">
-                        <div id="map-canvas" style='height:300px; width:100%; min-width: 218px'></div>
+                        <div id="map-canvas"></div>
                         <br>
                         <p>This map, created with the Google Maps API, shows the locations of different cinemas in Auckland, as seen in my Movie Website</p>
-                        <ul>
-                            <li>Click on the Markers to see more details</li>
-                        </ul>
+                        <div class="alert alert-info" role="alert">
+                            Click on the Markers to see more details
+                        </div>
                     </div>
                 </div> 
               </div>
@@ -1136,6 +1081,7 @@
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
     <script src="js/google-maps.js" type="text/javascript"></script>
 
+    <!-- Isotope -->
     <script src="http://imagesloaded.desandro.com/imagesloaded.pkgd.min.js"></script>
     <script src="http://isotope.metafizzy.co/isotope.pkgd.min.js"></script>
 

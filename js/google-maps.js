@@ -35,7 +35,7 @@ function initializeMap(){
         google.maps.event.addListener(marker, 'click', (function(marker, i) {
             return function() {
               infowindow.setContent('<div id="content">'+
-              '<h3 id="firstHeading" style="color: #333">Event Cinemas ' + cinemas[i][0] + '</h3>'+
+              '<h4 id="firstHeading" style="color: #333">Event Cinemas ' + cinemas[i][0] + '</h4>'+
               '<div id="bodyContent">'+
               '<p style="color: #333">' + cinemas[i][5] + '</p>'+
               '<a href="' +  cinemas[i][4] + '" target="_blank" >Visit Site </a> ' +
