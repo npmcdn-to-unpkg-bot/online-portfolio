@@ -443,15 +443,6 @@ a[data-toggle="collapse"] > .panel-heading:hover{
     }
 }
 
-@media screen and (max-width: 767px){
-    .soft-wrapper {
-        /*padding-right: 15px;
-        padding-left: 15px; 
-        margin-right: auto; 
-        margin-left: auto;*/
-    }
-}
-
 .cv-btn{
      white-space: normal;
 }
@@ -464,6 +455,7 @@ a[data-toggle="collapse"] > .panel-heading:hover{
 }
 .contact-btn{
     font-size: 16px;
+    margin-bottom: 10px;
 }
 .social-btn{   
     -webkit-border-radius: 50%;
