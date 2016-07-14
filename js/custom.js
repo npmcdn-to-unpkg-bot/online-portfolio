@@ -18,6 +18,17 @@ $(document).ready(function(){
 	$('[data-toggle="tooltip"]').hover(function(){
 		$(this).tooltip('show');
 	});
+	
+	// Angular Esri Map Demo
+	var access = function(data){
+		$("#esriNameText").empty().html(data.name);
+		$("#esriAddressText").empty().html(data.address);
+		
+		if($("#esriForm").css("visibility") === "hidden")
+		{
+			$("#esriForm").css("visibility", "visible");
+		}
+	}
 
   	// Brand Pillars Demo
   	$(".pillar-btn").click(function(){
