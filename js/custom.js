@@ -1,3 +1,14 @@
+	// Angular Esri Map Demo
+	var access = function(data){
+		$("#esriNameText").empty().html(data.name);
+		$("#esriAddressText").empty().html(data.address);
+		
+		if($("#esriForm").css("visibility") === "hidden")
+		{
+			$("#esriForm").css("visibility", "visible");
+		}
+	}
+
 $(document).ready(function(){
 
 	// Smooth Scrolling
@@ -19,16 +30,7 @@ $(document).ready(function(){
 		$(this).tooltip('show');
 	});
 	
-	// Angular Esri Map Demo
-	var access = function(data){
-		$("#esriNameText").empty().html(data.name);
-		$("#esriAddressText").empty().html(data.address);
-		
-		if($("#esriForm").css("visibility") === "hidden")
-		{
-			$("#esriForm").css("visibility", "visible");
-		}
-	}
+
 
   	// Brand Pillars Demo
   	$(".pillar-btn").click(function(){
