@@ -31,6 +31,18 @@
       <script src="//oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
       <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+	<script>
+		// Angular Esri Map Demo
+		var access = function(data){
+			$("#esriNameText").empty().html(data.name);
+			$("#esriAddressText").empty().html(data.address);
+			
+			if($("#esriForm").css("visibility") === "hidden")
+			{
+				$("#esriForm").css("visibility", "visible");
+			}
+		}
+	</script>
 
 </head>
 <body data-spy="scroll" data-target="#main-navbar" data-offset="150">
