@@ -68,30 +68,30 @@ $(document).ready(function(){
 	})
 
 	// My Favourites
-	var $container = $('.thumb-container').imagesLoaded( function() {
-	  $container.isotope({
-	  	layoutMode: 'fitRows'
-	    // options
-	  });
-	});
+	// var $container = $('.thumb-container').imagesLoaded( function() {
+	  // $container.isotope({
+	  	// layoutMode: 'fitRows'
+	    // // options
+	  // });
+	// });
 
-	$('#favouritesModal').on('shown.bs.modal', function (e) {
-		$container.isotope({ filter: '*' });
-	})
+	// $('#favouritesModal').on('shown.bs.modal', function (e) {
+		// $container.isotope({ filter: '*' });
+	// })
 
-	$('.isotope-filter-group').on( 'click', 'button', function() {
-	  var filterValue = $(this).attr('data-filter');
-	  $container.isotope({ filter: filterValue });
-	});	
+	// $('.isotope-filter-group').on( 'click', 'button', function() {
+	  // var filterValue = $(this).attr('data-filter');
+	  // $container.isotope({ filter: filterValue });
+	// });	
 
-	// Change is-checked class on buttons
-	$('.isotope-filter-group').each( function( i, buttonGroup ) {
-		var $buttonGroup = $( buttonGroup );
-		$buttonGroup.on( 'click', 'button', function() {
-		  $buttonGroup.find('.is-checked').removeClass('is-checked');
-		  $( this ).addClass('is-checked');
-		});
-	});
+	// // Change is-checked class on buttons
+	// $('.isotope-filter-group').each( function( i, buttonGroup ) {
+		// var $buttonGroup = $( buttonGroup );
+		// $buttonGroup.on( 'click', 'button', function() {
+		  // $buttonGroup.find('.is-checked').removeClass('is-checked');
+		  // $( this ).addClass('is-checked');
+		// });
+	// });
 
 
 	// Skills Accordion
